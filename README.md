@@ -1,5 +1,8 @@
 # README
 
+This app follows the Odin Rails project 'Members Only' at https://www.theodinproject.com/lessons/ruby-on-rails-members-only
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 

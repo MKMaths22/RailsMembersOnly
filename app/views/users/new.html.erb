@@ -1,0 +1,11 @@
+This text displays in the new view.
+
+<%= form_with model: @user do |f| %>
+  <%= f.label :name, "Your Name" %><br>
+  <%= f.text_field :name %><br>
+  <%= f.label :password %><br>
+  <%= f.password_field :password %><br>
+  <%= f.label :email %><br>
+  <%= f.email_field :email %><br>
+  <%= f.submit "Submit" %><br>
+<% end %>
