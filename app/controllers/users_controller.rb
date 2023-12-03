@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(name: params[:user][:name], password: params[:user][:password], email: params[:user][:email])
+    @user = User.new(name: allowed_user_params[:name], password: allowed_user_params[:password], email: allowed_user_params[:email])
 
     if @user.save
       flash[:success] = "User created successfully"
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-      if @user.update!(:name => params[:user][:name], :password => params[:user][:password], :email => params[:user][:email])
+      if @user.update!(:name => allowed_user_params[:name], :password => allowed_user_params[:password], :email => allowed_user_params[:email])
         flash[:success] = 'Details updated successfully'
         redirect_to new_user_path
       else
