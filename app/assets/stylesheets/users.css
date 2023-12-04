@@ -1,3 +1,7 @@
 .field_with_errors {
   display: inline
 }
+
+.flashdiv {
+  padding-bottom: 10px;
+}
