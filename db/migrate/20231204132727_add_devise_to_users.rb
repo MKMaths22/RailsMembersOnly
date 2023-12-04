@@ -4,7 +4,8 @@ class AddDeviseToUsers < ActiveRecord::Migration[7.1]
   def self.up
     change_table :users do |t|
       ## Database authenticatable
-      t.string :email,              null: false, default: ""
+      # Commented out the t.string :email line below because of duplicate column error when running the migration
+      # t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 
       ## Recoverable
